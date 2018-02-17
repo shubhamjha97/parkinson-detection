@@ -35,7 +35,7 @@ def find_velocity(f):
     
     '''
     data_pat=pd.read_csv(f, sep=';', header=None, names=header_row)
-    data_pat=data_pat[data_pat["Test_ID"]==0]    # Use only static test
+    data_pat=data_pat[data_pat["Test_ID"]==1]    # Use only static test
     initial_timestamp=data_pat['Timestamp'][0]
     data_pat['Timestamp']=data_pat['Timestamp']- initial_timestamp
     Vel = []
